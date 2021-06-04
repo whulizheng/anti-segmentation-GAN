@@ -19,8 +19,8 @@ class Antiseg():
             2e-4, beta_1=0.5)
         self.generator = self.Generator()
         self.discriminator = self.Discriminator()
-        self.generator_seg = None
-        self.discriminator_seg = None
+        self.generator_seg = self.Generator()
+        self.discriminator_seg = self.Discriminator()
         self.generator_seg_optimizer = tf.keras.optimizers.Adam(
             2e-4, beta_1=0.5)
         self.discriminator_seg_optimizer = tf.keras.optimizers.Adam(

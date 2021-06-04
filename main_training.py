@@ -6,8 +6,8 @@ BUFFER_SIZE = 400
 EPOCHS = 100
 BATCH_SIZE = 1
 shape = [256, 256]
-training_PATH = "/data/HRSC2016/training/"
-test_PATH = "/data/HRSC2016/training/"
+training_PATH = "data/HRSC2016/train/"
+test_PATH = "data/HRSC2016/train/"
 train_dataset = tf.data.Dataset.list_files(training_PATH+'*.png')
 train_dataset = train_dataset.map(
     lambda x: Utils.load_image_train(x, shape))
